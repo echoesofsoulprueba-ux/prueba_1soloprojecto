@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* No usamos @apply acá para los tokens del design system (bg-background, text-foreground):
+   @apply exige que la clase exista en tiempo de compilación y falla si el preset todavía no
+   está cargado. En cambio, esas clases ya están puestas directo en el className del div raíz
+   en App.jsx, donde simplemente no pintan nada hasta que el preset llega — sin romper el build. */
+body {
+  @apply font-sans antialiased;
+}

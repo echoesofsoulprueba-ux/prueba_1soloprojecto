@@ -1,0 +1,22 @@
+{
+  "name": "mi-proyecto-existente",
+  "private": true,
+  "version": "0.0.1",
+  "_comment_design_system": "Este proyecto simula 'mi propio proyecto ya armado' para probar el modo EMBEDDED ('Agregar a mi proyecto') de SuperDSAI Generator. No instala nada por npm: al exportar desde la app, apuntá el campo 'Repositorio (usuario/repo)' a ESTE repo (usuario/este-repo), y la app le va a agregar una carpeta design-system/ acá mismo vía Pull Request.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "vite": "^5.4.0"
+  }
+}

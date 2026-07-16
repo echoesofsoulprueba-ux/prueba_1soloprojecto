@@ -1,39 +1,42 @@
 import React from 'react';
 
+/**
+ * A utility function to conditionally join Tailwind CSS classes.
+ * @param {(string | boolean | null | undefined)[]} classes - An array of class names, booleans, null, or undefined.
+ * @returns {string} A single string of joined and filtered class names.
+ */
 function cn() {
-  return Array.prototype.slice.call(arguments).filter(Boolean).join(' ');
+  var classes = Array.prototype.slice.call(arguments);
+  return classes.filter(Boolean).join(' ');
 }
-
-const badgeVariants = {
-  default: 'bg-muted text-mutedForeground hover:bg-muted/80',
-  primary: 'bg-primary text-primaryForeground hover:bg-primary/80',
-  success: 'bg-success text-successForeground hover:bg-success/80',
-  warning: 'bg-warning text-warningForeground hover:bg-warning/80',
-  error: 'bg-error text-errorForeground hover:bg-error/80'
-};
 
 /**
- * @typedef {'default' | 'primary' | 'success' | 'warning' | 'error'} BadgeVariant
- *
- * @param {object} props
- * @param {BadgeVariant} [props.variant='default'] - The visual style of the badge.
+ * Badge component for small, descriptive labels.
+ * @param {object} props - The component props.
+ * @param {'default' | 'primary' | 'success' | 'warning' | 'error'} [props.variant='default'] - The visual variant of the badge.
  * @param {React.ReactNode} props.children - The content of the badge.
- * @param {string} [props.className=''] - Additional CSS classes to apply.
+ * @param {string} [props.className] - Additional CSS classes to apply to the badge.
+ * @returns {JSX.Element}
  */
-function Badge(props) {
-  const { variant = 'default', children, className = '' } = props;
+const Badge = (props) => {
+  const { variant = 'default', children, className, ...rest } = props;
 
-  const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseStyles = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2';
 
-  const variantClass = badgeVariants[variant];
+  const variantStyles = {
+    'default': 'border-transparent bg-muted text-muted-foreground',
+    'primary': 'border-transparent bg-primary text-primary-foreground',
+    'success': 'border-transparent bg-success text-success-foreground',
+    'warning': 'border-transparent bg-warning text-warning-foreground',
+    'error': 'border-transparent bg-error text-error-foreground'
+  };
 
-  return React.createElement(
-    'div',
-    { className: cn(baseClasses, variantClass, className) },
-    children
+  return (
+    <span className={cn(baseStyles, variantStyles[variant], className)} {...rest}>
+      {children}
+    </span>
   );
-}
+};
 
-Badge.displayName = 'Badge';
 
-export { Badge };
+export { Badge }

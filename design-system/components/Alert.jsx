@@ -1,46 +1,46 @@
 import React from 'react';
 
+/**
+ * A utility function to conditionally join Tailwind CSS classes.
+ * @param {(string | boolean | null | undefined)[]} classes - An array of class names, booleans, null, or undefined.
+ * @returns {string} A single string of joined and filtered class names.
+ */
 function cn() {
-  return Array.prototype.slice.call(arguments).filter(Boolean).join(' ');
+  var classes = Array.prototype.slice.call(arguments);
+  return classes.filter(Boolean).join(' ');
 }
-
-const alertVariants = {
-  success: 'bg-success text-successForeground border-success',
-  warning: 'bg-warning text-warningForeground border-warning',
-  error: 'bg-error text-errorForeground border-error'
-};
 
 /**
- * @typedef {'success' | 'warning' | 'error'} AlertVariant
- *
- * @param {object} props
- * @param {AlertVariant} props.variant - The visual style of the alert.
+ * Alert component to display important messages.
+ * @param {object} props - The component props.
+ * @param {'success' | 'warning' | 'error'} props.variant - The visual variant of the alert.
  * @param {string} props.title - The title of the alert.
- * @param {React.ReactNode} props.children - The content of the alert.
- * @param {string} [props.className=''] - Additional CSS classes to apply.
+ * @param {React.ReactNode} props.children - The content of the alert message.
+ * @param {string} [props.className] - Additional CSS classes to apply to the alert.
+ * @returns {JSX.Element}
  */
-function Alert(props) {
-  const { variant, title, children, className = '' } = props;
+const Alert = (props) => {
+  const { variant, title, children, className, ...rest } = props;
 
-  const baseClasses = 'relative w-full rounded-lg border p-4';
-  const variantClass = alertVariants[variant];
+  const baseStyles = 'relative w-full rounded-lg border p-4';
 
-  return React.createElement(
-    'div',
-    { className: cn(baseClasses, variantClass, className), role: 'alert' },
-    React.createElement(
-      'div',
-      { className: 'mb-1 font-semibold' },
-      title
-    ),
-    React.createElement(
-      'div',
-      { className: 'text-sm [&_p]:leading-relaxed' },
-      children
-    )
+  const variantStyles = {
+    success: 'bg-success/10 border-success text-success-foreground',
+    warning: 'bg-warning/10 border-warning text-warning-foreground',
+    error: 'bg-error/10 border-error text-error-foreground'
+  };
+
+  return (
+    <div
+      className={cn(baseStyles, variantStyles[variant], className)}
+      role="alert"
+      {...rest}
+    >
+      {title && <h5 className="mb-1 font-bold leading-none tracking-tight">{title}</h5>}
+      <div className="text-sm [&_p]:leading-relaxed">{children}</div>
+    </div>
   );
-}
+};
 
-Alert.displayName = 'Alert';
 
-export { Alert };
+export { Alert }

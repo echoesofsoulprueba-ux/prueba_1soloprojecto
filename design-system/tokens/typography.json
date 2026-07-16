@@ -13,11 +13,11 @@
     "normal": "400",
     "semibold": "600"
   },
-  "fontFamily": "Montserrat, sans-serif",
+  "fontFamily": "Lato, sans-serif",
   "lineHeights": {
     "tight": "1.25",
     "normal": "1.5",
     "relaxed": "1.75"
   },
-  "fontFamilyDisplay": "Montserrat, sans-serif"
+  "fontFamilyDisplay": "Display, sans-serif"
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Display",
+    "role": "display",
+    "sizePx": 48,
+    "sizeRem": 3,
+    "weightName": "ExtraBold",
+    "description": "Para títulos grandes y llamativos.",
+    "weightValue": 800
+  },
+  {
+    "name": "Heading 1",
+    "role": "heading",
+    "sizePx": 36,
+    "sizeRem": 2.25,
+    "weightName": "Bold",
+    "description": "Encabezado principal de sección.",
+    "weightValue": 700
+  },
+  {
+    "name": "Heading 2",
+    "role": "heading",
+    "sizePx": 30,
+    "sizeRem": 1.875,
+    "weightName": "Bold",
+    "description": "Encabezado de subsección.",
+    "weightValue": 700
+  },
+  {
+    "name": "Heading 3",
+    "role": "heading",
+    "sizePx": 24,
+    "sizeRem": 1.5,
+    "weightName": "Semibold",
+    "description": "Encabezado para contenido secundario.",
+    "weightValue": 600
+  },
+  {
+    "name": "Heading 4",
+    "role": "heading",
+    "sizePx": 20,
+    "sizeRem": 1.25,
+    "weightName": "Semibold",
+    "description": "Encabezado para listas o elementos específicos.",
+    "weightValue": 600
+  },
+  {
+    "name": "Body",
+    "role": "body",
+    "sizePx": 16,
+    "sizeRem": 1,
+    "weightName": "Regular",
+    "description": "Texto principal para párrafos y contenido general.",
+    "weightValue": 400
+  }
+]

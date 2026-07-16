@@ -2,46 +2,46 @@
   {
     "name": "Display",
     "role": "display",
-    "sizePx": 48,
-    "sizeRem": 3,
+    "sizePx": 64,
+    "sizeRem": 4,
     "weightName": "ExtraBold",
-    "description": "Para títulos grandes y llamativos.",
+    "description": "Large, impactful text for hero sections or prominent statements.",
     "weightValue": 800
   },
   {
     "name": "Heading 1",
     "role": "heading",
-    "sizePx": 36,
-    "sizeRem": 2.25,
+    "sizePx": 48,
+    "sizeRem": 3,
     "weightName": "Bold",
-    "description": "Encabezado principal de sección.",
+    "description": "Primary page titles and main content headings.",
     "weightValue": 700
   },
   {
     "name": "Heading 2",
     "role": "heading",
-    "sizePx": 30,
-    "sizeRem": 1.875,
+    "sizePx": 36,
+    "sizeRem": 2.25,
     "weightName": "Bold",
-    "description": "Encabezado de subsección.",
+    "description": "Section titles within a page.",
     "weightValue": 700
   },
   {
     "name": "Heading 3",
     "role": "heading",
-    "sizePx": 24,
-    "sizeRem": 1.5,
+    "sizePx": 30,
+    "sizeRem": 1.875,
     "weightName": "Semibold",
-    "description": "Encabezado para contenido secundario.",
+    "description": "Sub-sections and important callouts.",
     "weightValue": 600
   },
   {
     "name": "Heading 4",
     "role": "heading",
-    "sizePx": 20,
-    "sizeRem": 1.25,
+    "sizePx": 24,
+    "sizeRem": 1.5,
     "weightName": "Semibold",
-    "description": "Encabezado para listas o elementos específicos.",
+    "description": "Minor headings and emphasis within content.",
     "weightValue": 600
   },
   {
@@ -50,7 +50,7 @@
     "sizePx": 16,
     "sizeRem": 1,
     "weightName": "Regular",
-    "description": "Texto principal para párrafos y contenido general.",
+    "description": "Standard paragraph text for most content.",
     "weightValue": 400
   }
 ]

@@ -2,46 +2,46 @@
   {
     "name": "Display",
     "role": "display",
-    "sizePx": 64,
-    "sizeRem": 4,
+    "sizePx": 48,
+    "sizeRem": 3,
     "weightName": "ExtraBold",
-    "description": "Large, impactful text for hero sections or prominent statements.",
+    "description": "Utilizado para títulos impactantes y principales de la marca.",
     "weightValue": 800
   },
   {
     "name": "Heading 1",
     "role": "heading",
-    "sizePx": 48,
-    "sizeRem": 3,
+    "sizePx": 36,
+    "sizeRem": 2.25,
     "weightName": "Bold",
-    "description": "Primary page titles and main content headings.",
+    "description": "Encabezados principales de secciones o páginas importantes.",
     "weightValue": 700
   },
   {
     "name": "Heading 2",
     "role": "heading",
-    "sizePx": 36,
-    "sizeRem": 2.25,
+    "sizePx": 30,
+    "sizeRem": 1.875,
     "weightName": "Bold",
-    "description": "Section titles within a page.",
+    "description": "Títulos para subsecciones o grupos de contenido.",
     "weightValue": 700
   },
   {
     "name": "Heading 3",
     "role": "heading",
-    "sizePx": 30,
-    "sizeRem": 1.875,
+    "sizePx": 24,
+    "sizeRem": 1.5,
     "weightName": "Semibold",
-    "description": "Sub-sections and important callouts.",
+    "description": "Títulos para tarjetas, módulos o componentes específicos.",
     "weightValue": 600
   },
   {
     "name": "Heading 4",
     "role": "heading",
-    "sizePx": 24,
-    "sizeRem": 1.5,
+    "sizePx": 20,
+    "sizeRem": 1.25,
     "weightName": "Semibold",
-    "description": "Minor headings and emphasis within content.",
+    "description": "Subtítulos menores o para énfasis dentro del texto.",
     "weightValue": 600
   },
   {
@@ -50,7 +50,7 @@
     "sizePx": 16,
     "sizeRem": 1,
     "weightName": "Regular",
-    "description": "Standard paragraph text for most content.",
+    "description": "Texto estándar para el contenido principal y lectura general.",
     "weightValue": 400
   }
 ]
